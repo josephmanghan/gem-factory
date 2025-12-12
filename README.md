@@ -1,16 +1,18 @@
 # Gem Factory
 
-A development environment for creating and deploying Gemini Gems with deep reasoning and sophisticated instruction architectures.
+A development environment for creating and deploying Gemini Gems with deep reasoning and sophisticated instruction patterns.
+
+This repository provides tools and structure for developing Gems that unlock Gemini's reasoning potential through a thoughtful, well-architected system and knowledge organization.
 
 ## Why Gems?
 
-Recent Gemini updates represent a marked advancement in reasoning ability and processing power. The **2 million token context window** of the Gemini Web UI is large enough to include extensive code, comprehensive documentation, and rich contextual information—without the context management friction of IDEs (limited to ~200k tokens).
+Recent Gemini updates represent a marked advancement in reasoning ability and processing power. The **2 million token context window** of the Gemini Web UI is large enough to include extensive code, comprehensive documentation, and rich contextual information — without the context management friction of IDEs (limited to ~200k tokens). That's a significant difference, and it opens up possibilities for relatively sophisticated agent architectures.
 
-Critically, the Web UI is accessible to everyone—product managers, designers, non-technical stakeholders—not locked to engineers. This democratization, combined with Gemini's cost-effectiveness relative to token usage, makes Gems a niche but compelling vehicle for exploring AI agent potential across diverse teams and skill levels.
+More importantly, the Web UI is accessible to everyone — product managers, designers, non-technical stakeholders — not locked to engineers. This democratization is what makes Gems genuinely interesting: we can all exist in the same ecosystem, using the same tools, with the same level of power. Combined with Gemini's cost-effectiveness, this creates a niche but compelling case for Gems as a vehicle for AI agent development.
 
-Gems can be easily maintained and shared with collaborators. When you connect knowledge files from Google Drive, they receive automatic updates—no need to recreate or redistribute. This enables sustainable, iterative development where both users and dependent gems automatically receive improvements.
+Gems can be easily maintained and shared with collaborators. When you connect knowledge files from Google Drive, they receive automatic updates — no need to recreate or redistribute. Update once, everyone gets it for free. This enables sustainable, iterative development where both users and dependent gems automatically receive improvements without any friction.
 
-The purpose of this repository is to provide an environment for developing Gems that unlock Gemini's reasoning potential through thoughtful, well-architected system instructions and knowledge organization.
+The architecture is designed around this update pattern: minimal iteration on system instructions, with most improvements happening through knowledge file updates. This keeps gems stable while remaining flexible.
 
 ## Quick Start
 
@@ -29,7 +31,7 @@ The purpose of this repository is to provide an environment for developing Gems 
 
 ## Working with Agents
 
-This repository is structured to be compatible with agentic IDEs that follow the [AGENTS.md specification](https://agents.md/), now recognised as a standard by the [Linux Foundation's Agentic AI Foundation (AAIF)](https://aaif.io/press/linux-foundation-announces-the-formation-of-the-agentic-ai-foundation-aaif-anchored-by-new-project-contributions-including-model-context-protocol-mcp-goose-and-agents-md/). The [AGENTS.md](./AGENTS.md) file supports agents in contributing to this repo.
+This repository is structured to be compatible with agentic IDEs that follow the [AGENTS.md specification](https://agents.md/), now recognised as a standard by the [Linux Foundation's Agentic AI Foundation](https://aaif.io/press/linux-foundation-announces-the-formation-of-the-agentic-ai-foundation-aaif-anchored-by-new-project-contributions-including-model-context-protocol-mcp-goose-and-agents-md/). The [AGENTS.md](./AGENTS.md) file supports agents in contributing to this repo.
 
 For complete architectural and style guidelines that both agents and humans should follow when creating gems, see [docs/index.md](./docs/index.md). For an overview of the Gemini Gems platform itself, see [docs/platform-overview.md](./docs/platform-overview.md).
 
@@ -85,11 +87,11 @@ npm run deploy:target {gem-name}
 
 The deployment script:
 
-1. **Converts YAML to Markdown** - Your `{gem-name}.agent.yaml` definitions are converted to Markdown for easier Gemini UI pasting
-2. **Optimizes Context** - Removes filler words and stopgap words (caveman processing) to reduce token count while preserving reasoning ability and meaning
-3. **Generates Web Bundle** - Creates a portable `.md` file containing your complete gem definition
+1. **Converts YAML to Markdown** - Your `{gem-name}.agent.yaml` definitions are converted to Markdown for easier pasting into the Gemini UI
+2. **Optimizes Context** - Removes filler words and stopgap words (caveman processing) to reduce token count while preserving reasoning ability and meaning. While Gemini can handle extensive context, more initialization data impacts performance and reliability — optimization keeps gems responsive.
+3. **Generates Web Bundle** - Creates a consolidated, portable `.md` file containing your complete gem definition
 
-The web bundle is particularly valuable for quick testing and sharing—you can copy-paste it directly into any AI chat interface (Gemini, ChatGPT, Claude, etc.) without needing to create a formal Gem first.
+The web bundle is particularly valuable — you can copy-paste it directly into any AI chat interface (Gemini, ChatGPT, Claude, etc.) for quick testing and sharing, no formal Gem creation needed.
 
 ## Getting Started: Setting Up a Gem
 
@@ -99,7 +101,7 @@ The web bundle is particularly valuable for quick testing and sharing—you can 
    - Copy and paste your `.md` content directly into a Google Doc, or
    - Drag your `.md` files into Google Drive, open them (they render as Google Docs), then delete the original files
 
-2. **For CSV files** - Create a Google Sheet and import your CSV (don't drag CSV files directly—Gemini interprets them incorrectly)
+2. **For CSV files** - Create a Google Sheet and import your CSV (don't drag CSV files directly — Gemini gets very confused by them)
 
 You can edit CSVs either in your local IDE or directly in Google Sheets. Both approaches work equally well.
 
@@ -114,14 +116,8 @@ You can edit CSVs either in your local IDE or directly in Google Sheets. Both ap
 
 3. Copy your processed `{gem-name}.agent.md` content from the `deploy/` directory and paste it into the **System instructions** pane (or use the raw YAML from `internal/agent/{gem-name}.agent.yaml` if you haven't run deployment yet)
 4. Click the **+** button next to **Knowledge**
-5. Add up to 10 knowledge files from Google Drive (this is important—adding from Drive enables automatic updates)
+5. Add up to 10 knowledge files from Google Drive (this is important — adding from Drive enables automatic updates)
 
 ### Step 3: Share
 
 Click **Share** and distribute your Gem. All users will automatically receive updates to any Google Drive-connected knowledge files without needing new links or redistributions.
-
-## Key Advantages of This Approach
-
-- **Automatic Updates**: Knowledge files connected from Google Drive sync automatically. Update once, all users get the new version for free.
-- **Minimal Configuration Changes**: The architecture is designed to require minimal iteration on system instructions. Most improvements happen through knowledge file updates.
-- **Performance-Conscious**: While Gemini's reasoning capacity is very high and this architecture allows for considerable complexity, bear in mind that adding more initialization data will impact performance, and past a certain point, will likely impact reliability as well.
