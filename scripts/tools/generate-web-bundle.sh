@@ -1,17 +1,17 @@
 #!/bin/bash
 set -e  # Exit on error
 
-# Check if directory argument is provided
-if [ -z "$1" ]; then
-  echo "Error: Directory argument required" >&2
-  echo "Usage: npm run generate:web-bundle -- <directory>" >&2
+# Check if arguments are provided
+if [ -z "$1" ] || [ -z "$2" ]; then
+  echo "Error: Two arguments required" >&2
+  echo "Usage: generate-web-bundle.sh <input-directory> <gem-name>" >&2
   exit 1
 fi
 
 input_path="$1"
-parent_path=$(dirname "$input_path")
-output_dir="$parent_path/web-bundle"
-output_path="$output_dir/$(basename "$parent_path").web-bundle.md"
+gem_name="$2"
+output_dir="${REPO_ROOT:-$(cd "$(dirname "$0")/../.." && pwd)}/deploy/web-bundles"
+output_path="$output_dir/$gem_name.web-bundle.md"
 
 # Create output directory
 mkdir -p "$output_dir"

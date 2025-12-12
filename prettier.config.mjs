@@ -19,6 +19,13 @@ export default {
       },
     },
     {
+      files: ['deploy/**/*.md'],
+      options: {
+        proseWrap: 'always',
+        embeddedLanguageFormatting: 'auto',
+      },
+    },
+    {
       files: ['*.yaml', '*.yml'],
       options: {
         singleQuote: false,
