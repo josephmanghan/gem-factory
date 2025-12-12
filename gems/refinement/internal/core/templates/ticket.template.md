@@ -1,37 +1,37 @@
-# {{ticket_title}}
+# _{{ ticket-title }}_
 
-**Release Version:** {{release_version}}
+**Release Version:** _{{ release-version }}_
 
 ## User Story
 
-{{user_story}}
+_{{ user-story }}_
 
 ## Acceptance Criteria
 
-{{acceptance_criteria}}
+_{{ acceptance-criteria }}_
 
 ## Checklist
 
 ### Scope
 
-{{scope}}
+_{{ scope }}_
 
 ### QA Considerations
 
-{{qa}}
+_{{ qa }}_
 
 ### Breaking Changes & Dependencies
 
-{{breaking_deps}}
+_{{ breaking-deps }}_
 
 ### Cross-Functional Requirements
 
-{{technical_considerations}}
+_{{ technical-considerations }}_
 
 ## Impacts
 
-{{impacts}}
+_{{ impacts }}_
 
 ## Dev Notes
 
-{{dev_notes}}
+_{{ dev-notes }}_

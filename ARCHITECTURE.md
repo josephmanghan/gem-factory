@@ -4,6 +4,9 @@
 
 Gem Factory is a monorepo development environment for building Gemini gems. It provides complete tooling infrastructure, standards, and example gems in a single workspace where developers can build and deploy their own gems.
 
+The key distinction: ARCHITECTURE is about the system design, while
+STYLE-GUIDE is about implementation patterns.
+
 ## Repository Structure
 
 ```
@@ -164,19 +167,26 @@ Each gem in `gems/` follows a standard package structure:
 
 ```
 gems/gem-name/
-├── internal/          # Gem code (deployed)
-│   ├── agent/
-│   ├── core/
-│   └── *.yaml
 ├── README.md          # Gem documentation
 ├── CHANGELOG.md       # Version history (optional)
+└── internal/          # Gem code (deployed)
+    ├── agent/
+    │   └── {gem-name}.agent.yaml
+    └── core/
+        ├── data/
+        ├── instructions/
+        ├── templates/ (optional)
+        └── {other subdirectories as needed}
+    {gem-name}.package.yaml
 ```
 
-**Key principle:**
+**Key principles:**
 
 - Everything in `internal/` gets deployed
-- Everything at gem root stays local
-- This allows gems to have documentation, notes, and other artifacts without affecting deployment
+- Everything at gem root stays local (README, CHANGELOG, notes)
+- The `agent/` directory with `{gem-name}.agent.yaml` must exist at the top of `internal/` so the deployment correctly generates the web bundle—keep it at the top level
+- Add additional subdirectories only under `core/`, never at the `internal/` root
+- Only what's declared in the agent's `dependencies:` section is active; other files provide context
 
 ## Standards and Tooling
 

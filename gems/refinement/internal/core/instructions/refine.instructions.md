@@ -96,7 +96,7 @@ Based on the current draft ticket, I propose retaining:
 
 Please confirm or refine the ticket metadata.
 
-**Template Output Variables:** ticket_title, release_version
+**Template Output Variables:** _{{ ticket-title }}_, _{{ release-version }}_
 
 ---
 
@@ -124,7 +124,7 @@ Based on what I understand, I propose:
 
 Does this accurately capture the user story? Please confirm or provide refinements.
 
-**Template Output Variables:** user_story
+**Template Output Variables:** _{{ user-story }}_
 
 ---
 
@@ -159,7 +159,7 @@ Based on what I understand, I propose these acceptance criteria:
 
 Please confirm or provide refinements.
 
-**Template Output Variables:** acceptance_criteria
+**Template Output Variables:** _{{ acceptance-criteria }}_
 
 ---
 
@@ -195,7 +195,7 @@ Based on what I understand, I propose:
 
 Please confirm or refine.
 
-**Template Output Variables:** scope
+**Template Output Variables:** _{{ scope }}_
 
 ---
 
@@ -226,7 +226,7 @@ Based on what I understand, I propose:
 
 Please confirm or refine.
 
-**Template Output Variables:** qa
+**Template Output Variables:** _{{ qa }}_
 
 ---
 
@@ -260,7 +260,7 @@ Based on what I understand, I propose:
 
 Please confirm or refine.
 
-**Template Output Variables:** breaking_deps
+**Template Output Variables:** _{{ breaking-deps }}_
 
 ---
 
@@ -296,7 +296,7 @@ Based on what I understand, I propose:
 
 Please confirm or refine.
 
-**Template Output Variables:** technical_considerations
+**Template Output Variables:** _{{ technical-considerations }}_
 
 ---
 
@@ -330,7 +330,7 @@ Based on what I understand, I propose:
 
 Please confirm or refine.
 
-**Template Output Variables:** impacts
+**Template Output Variables:** _{{ impacts }}_
 
 ---
 
@@ -381,7 +381,7 @@ Based on what I understand, I propose these dev notes:
 
 Please confirm or provide refinements.
 
-**Template Output Variables:** dev_notes
+**Template Output Variables:** _{{ dev-notes }}_
 
 ---
 
