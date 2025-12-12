@@ -2,4 +2,4 @@
 
 ### Added
 
-- Initial beta release to support user testing of products and interfaces.
+- Initial release to support user testing of products and interfaces.

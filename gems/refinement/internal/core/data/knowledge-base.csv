@@ -1,0 +1,12 @@
+category,subcategory,name,title,dependencies,description,notes
+repository,core,main-repo,Main application repository,@org/package-name,Primary repository containing core application code and features.,"Replace with your actual repository name and dependencies"
+repository,backend,backend-service,Backend service repository,@org/backend-dependency,Backend service handling business logic and APIs.,"Replace with your actual service name and dependencies"
+repository,ui,ui-library,UI component library,,"Shared component library with reusable UI elements.","Replace with your actual design system or component library"
+app,consumer,consumer-app,Consumer-facing application,,Public-facing application for end users.,"Replace with your actual consumer application name"
+app,internal,internal-app,Internal application,,Internal application for staff or administrators.,"Replace with your actual internal application name"
+app,test,test-app,Test application,,Testing and demo application for development.,"Replace with your actual test harness or demo app"
+feature,public,public-feature,@org/feature-package,@org/feature-dependency,Public-facing feature or module.,"Replace with your actual feature name and dependencies"
+feature,internal,internal-feature,@org/internal-package,,Internal feature or shared module.,"Replace with your actual internal feature name"
+version,current,current-version,,,Current development version.,"Update with your current version number"
+version,LTS,lts-version,,,Long-term support release version.,"Update with your LTS version number"
+version,breaking,breaking-version,,,Major release with breaking changes.,"Update with version that introduced breaking changes"

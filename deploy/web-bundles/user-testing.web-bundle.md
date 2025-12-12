@@ -227,10 +227,10 @@ note mode focuses single persona interaction targeted feedback.
 ```yaml
 id: 'user-testing-agent'
 version: '0.1.0'
-build-date: '12-12-2025'
+release-date: '12-12-2025'
 release-notes:
   version: '0.1.0'
   date: '12-12-2025'
   added:
-    - 'Initial beta release to support user testing of products and interfaces.'
+    - 'Initial release to support user testing of products and interfaces.'
 ```

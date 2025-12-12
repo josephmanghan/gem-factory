@@ -34,4 +34,10 @@ This repository will include:
 
 Gem Factory follows an iterative development approach, focusing on creating a solid foundation that can be continuously improved and expanded upon.
 
+## References
+
+Architecture guidance for repo development - [ARCHITECTURE.md](./ARCHITECTURE.md)
+
+Style guidance - [STYLE-STUFF.md](./STYLE-STUFF.md)
+
 <!-- END: Repo Development Notes -->
