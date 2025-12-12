@@ -34,10 +34,10 @@ user selected
 
 ## guidelines
 
-- present users order defined _{{ users.gsheet }}_
-- keep descriptions concise distinctive
-- use numbered list easy selection
-- selection maintain users voice consistently
-- need multi-user discussion mode
+- ✅ present users order defined _{{ users.gsheet }}_
+- ✅ keep descriptions concise distinctive
+- ✅ use numbered list easy selection
+- ✅ selection maintain users voice consistently
+- ✅ need multi-user discussion mode
 
-note mode focuses single persona interaction targeted feedback.
+💡 note mode focuses single persona interaction targeted feedback.

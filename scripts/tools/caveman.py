@@ -14,6 +14,23 @@ SUPPORTED_EXTENSIONS = {'.md', '.txt'}
 EXEMPT_FILES = {'README.md', 'help.instructions.md'}
 EXEMPT_SUFFIXES = {'.template.md', '.package.yaml'}
 
+# Approved emojis for this repo
+# See STYLE-STUFF.md for the full list and usage guidelines
+ALLOWED_EMOJIS = (
+    '⚠️'  # Warning sign - for alerts and cautions
+    '✅'  # Check mark - for completed items or approvals
+    '❌'  # Cross mark - for errors or rejections
+    '💡'  # Light bulb - for tips and ideas
+    '🎉'  # Celebration - for successes and milestones
+    '📝'  # Memo - for notes and documentation
+    '🔧'  # Wrench - for tools and configuration
+    '🚀'  # Rocket - for launches and deployments
+    '✨'  # Sparkles - for new features or enhancements
+    '📋'  # Clipboard - for checklists and tasks
+    '🔍'  # Magnifying glass - for search and investigation
+    '⭐'  # Star - for highlights and favorites
+)
+
 STOP_WORDS = {
     'a', 'about', 'above', 'after', 'again', 'against', 'all', 'am', 'an', 'and',
     'any', 'are', "aren't", 'as', 'at', 'be', 'because', 'been', 'before', 'being',
@@ -46,6 +63,7 @@ PATTERN_BLOCK_COMMENT = re.compile(r'/\*[\s\S]*?\*/')
 PATTERN_WHITESPACE = re.compile(r'\s+')
 PATTERN_BOX_CHARS = re.compile(r'[┌─┐↓↑├┤└┘]')
 PATTERN_NON_WORD = re.compile(r'[^\w\s#\-\./\{\}]')
+PATTERN_EMOJI = re.compile('(' + '|'.join(re.escape(e) for e in ALLOWED_EMOJIS) + ')')  # Matches any allowed emoji
 PATTERN_EXCESS_NEWLINES = re.compile(r'\n\s*\n\s*\n')
 PATTERN_CODE_SEGMENTS = re.compile(r'(```[\s\S]*?```|`[^`]+`)')
 PATTERN_CODE_FENCE = re.compile(r'^```(\w+)?\n([\s\S]*?)\n```$')
@@ -63,19 +81,34 @@ def compact_code(code: str) -> str:
 
 def remove_stop_words(text: str) -> str:
     """Removes stop words while preserving markdown structure."""
+    # Protect emojis by replacing them with placeholders BEFORE lowercasing
+    emoji_placeholders = {}
+    def replace_emoji(match):
+        placeholder = f'__EMOJI_{len(emoji_placeholders)}__'
+        emoji_placeholders[placeholder.lower()] = match.group(0)  # Store with lowercase key
+        return placeholder
+    
+    text = PATTERN_EMOJI.sub(replace_emoji, text)
+    
     text = text.lower().replace('\n', ' __newline__ ')
     text = PATTERN_NON_WORD.sub('', text)
     
     words = [
         word for word in text.split()
         if word == '__newline__'
-        or word.startswith(('#', '-'))
+        or word.startswith(('#', '-', '__emoji_'))
         or (word not in STOP_WORDS and len(word) > 1)
     ]
     
     result = ' '.join(words).replace('__newline__', '\n')
     result = re.sub(r'[ \t]+', ' ', result)  # Only compact spaces/tabs, not newlines
-    return PATTERN_EXCESS_NEWLINES.sub('\n\n', result).strip()
+    result = PATTERN_EXCESS_NEWLINES.sub('\n\n', result).strip()
+    
+    # Restore emojis (now they're lowercase in the result)
+    for placeholder, emoji in emoji_placeholders.items():
+        result = result.replace(placeholder, emoji)
+    
+    return result
 
 
 def parse_markdown(text: str) -> list[dict]:

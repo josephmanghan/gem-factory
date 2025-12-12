@@ -36,3 +36,22 @@ Variables are used to pass information throughout gem files. Follow these format
 - _{{ users.gsheet | personas }}_ - Extract personas from users.gsheet
 - _{{ user-testing.package.yaml | version }}_ - Get version from package
 - _{{ user-testing.package.yaml | release-notes.[version] }}_ - Access nested array property
+
+#### Emojis
+
+Emojis are preserved during the caveman conversion process. Only the following emojis are approved for use in this repository:
+
+- ⚠️ **Warning sign** - For alerts and cautions
+- ✅ **Check mark** - For completed items or approvals
+- ❌ **Cross mark** - For errors or rejections
+- 💡 **Light bulb** - For tips and ideas
+- 🎉 **Celebration** - For successes and milestones
+- 📝 **Memo** - For notes and documentation
+- 🔧 **Wrench** - For tools and configuration
+- 🚀 **Rocket** - For launches and deployments
+- ✨ **Sparkles** - For new features or enhancements
+- 📋 **Clipboard** - For checklists and tasks
+- 🔍 **Magnifying glass** - For search and investigation
+- ⭐ **Star** - For highlights and favorites
+
+**To add new emojis:** Update `scripts/tools/caveman.py` in the `ALLOWED_EMOJIS` constant with an inline comment explaining its purpose.

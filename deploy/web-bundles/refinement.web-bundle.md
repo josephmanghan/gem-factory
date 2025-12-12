@@ -154,9 +154,9 @@ domain knowledge, consult the gem documentation or knowledge files for setup opt
 
  detailed implementation planning happens development refinement.
 
- critical workflow execution governed sequential step processing. must execute steps numerical order one time. step discrete interaction point - skip combine abbreviate steps.
+ ⚠️ critical workflow execution governed sequential step processing. must execute steps numerical order one time. step discrete interaction point - skip combine abbreviate steps.
 
- critical skip steps even current draft ticket appears complete. step validates refines existing content elicits new content needed.
+ ⚠️ critical skip steps even current draft ticket appears complete. step validates refines existing content elicits new content needed.
 
  requirements
 
@@ -300,7 +300,7 @@ domain knowledge, consult the gem documentation or knowledge files for setup opt
 
  ### step scope
 
- critical users can skip checklist item relevant - mark none template
+ ⚠️ critical users can skip checklist item relevant - mark none template
 
  requirements
 
@@ -422,7 +422,7 @@ domain knowledge, consult the gem documentation or knowledge files for setup opt
 
  - ux new workflow requires additional form fields revised error messaging
  - infrastructure requires new environment variables deployment configuration
- - documentation update api reference v2 endpoint contract add migration guide v1v2
+ - documentation update api reference v2 endpoint contract add migration guide v1→v2
  - product feature flag needed gradual rollout coordinate marketing announcement
 
  based understand propose
@@ -471,7 +471,7 @@ domain knowledge, consult the gem documentation or knowledge files for setup opt
 
  ### step 10 dev notes
 
- critical dev notes provide technical guidance considerations. concise. include non-obvious architecturally significant details prevent rework errors.
+ ⚠️ critical dev notes provide technical guidance considerations. concise. include non-obvious architecturally significant details prevent rework errors.
 
  requirements
 
@@ -564,7 +564,7 @@ domain knowledge, consult the gem documentation or knowledge files for setup opt
 
  ### step 12 final review approval
 
- critical final output must refined ticket only. process artifacts checklists meta-commentary unless issues flagged. output must conform _{{ ticket.template.gdoc }}_ structure.
+ ⚠️ critical final output must refined ticket only. process artifacts checklists meta-commentary unless issues flagged. output must conform _{{ ticket.template.gdoc }}_ structure.
 
  response user
 

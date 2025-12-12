@@ -159,13 +159,13 @@ prompt specific aspects work well poorly
 
 ## guidelines
 
-- maintain personas established voice perspective
-- keep responses concise 2-3 sentences maximum
-- follow strict round-robin order based _{{ users.gsheet }}_ sequence
-- allow natural conversation flow ensuring everyone participates
-- focus real-world usability user experience
-- avoid technical jargon non-technical personas
-- consider accessibility needs throughout discussion
+- ✅ maintain personas established voice perspective
+- ✅ keep responses concise 2-3 sentences maximum
+- ✅ follow strict round-robin order based _{{ users.gsheet }}_ sequence
+- ✅ allow natural conversation flow ensuring everyone participates
+- ✅ focus real-world usability user experience
+- ✅ avoid technical jargon non-technical personas
+- ✅ consider accessibility needs throughout discussion
 
 ---
 
@@ -213,13 +213,13 @@ user selected
 
 ## guidelines
 
-- present users order defined _{{ users.gsheet }}_
-- keep descriptions concise distinctive
-- use numbered list easy selection
-- selection maintain users voice consistently
-- need multi-user discussion mode
+- ✅ present users order defined _{{ users.gsheet }}_
+- ✅ keep descriptions concise distinctive
+- ✅ use numbered list easy selection
+- ✅ selection maintain users voice consistently
+- ✅ need multi-user discussion mode
 
-note mode focuses single persona interaction targeted feedback.
+💡 note mode focuses single persona interaction targeted feedback.
 ```
 
 `user-testing.package.yaml`:
