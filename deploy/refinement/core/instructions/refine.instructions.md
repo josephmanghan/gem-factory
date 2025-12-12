@@ -42,9 +42,9 @@ user provides corrections refinements instead simply confirming
 3.  wait explicit confirmation - dont rush next step. ask capture feedback wait confirmation.
 4.  example
 
-- bad user says must investigated on-project public-facing properties might change agent writes
+- ❌ bad user says must investigated on-project public-facing properties might change agent writes
   investigated moves next step
-- good user says must investigated on-project public-facing properties might change agent writes
+- ✅ good user says must investigated on-project public-facing properties might change agent writes
   must investigated on-project determine public-facing properties change asks confirmation waits
   user response moves next step
 
@@ -106,7 +106,7 @@ release version extract current draft ticket
 
 please confirm refine ticket metadata.
 
-template output variables ticket_title release_version
+template output variables _{{ ticket-title }}_ _{{ release-version }}_
 
 ---
 
@@ -133,7 +133,7 @@ persona want capability benefit
 
 accurately capture user story please confirm provide refinements.
 
-template output variables user_story
+template output variables _{{ user-story }}_
 
 ---
 
@@ -170,7 +170,7 @@ proposed criteria bullet points
 
 please confirm provide refinements.
 
-template output variables acceptance_criteria
+template output variables _{{ acceptance-criteria }}_
 
 ---
 
@@ -204,7 +204,7 @@ out scope out scope items
 
 please confirm refine.
 
-template output variables scope
+template output variables _{{ scope }}_
 
 ---
 
@@ -236,7 +236,7 @@ qa considerations proposal none beyond standard regression
 
 please confirm refine.
 
-template output variables qa
+template output variables _{{ qa }}_
 
 ---
 
@@ -271,7 +271,7 @@ breaking changes dependencies proposal none
 
 please confirm refine.
 
-template output variables breaking_deps
+template output variables _{{ breaking-deps }}_
 
 ---
 
@@ -299,7 +299,7 @@ examples
 
 - ux new workflow requires additional form fields revised error messaging
 - infrastructure requires new environment variables deployment configuration
-- documentation update api reference v2 endpoint contract add migration guide v1→v2
+- documentation update api reference v2 endpoint contract add migration guide v1v2
 - product feature flag needed gradual rollout coordinate marketing announcement
 
 based understand propose
@@ -308,7 +308,7 @@ cross-functional requirements proposal none
 
 please confirm refine.
 
-template output variables technical_considerations
+template output variables _{{ technical-considerations }}_
 
 ---
 
@@ -343,7 +343,7 @@ proposed upstream/downstream impacts none identified
 
 please confirm refine.
 
-template output variables impacts
+template output variables _{{ impacts }}_
 
 ---
 
@@ -399,7 +399,7 @@ high-level technical guidance
 
 please confirm provide refinements.
 
-template output variables dev_notes
+template output variables _{{ dev-notes }}_
 
 ---
 

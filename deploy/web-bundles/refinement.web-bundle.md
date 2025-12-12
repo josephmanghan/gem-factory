@@ -171,8 +171,8 @@ domain knowledge, consult the gem documentation or knowledge files for setup opt
  2. restate updated proposal - show user revised content incorporating full feedback change reasoning.
  3. wait explicit confirmation - dont rush next step. ask capture feedback wait confirmation.
  4. example
- - bad user says must investigated on-project public-facing properties might change agent writes investigated moves next step
- - good user says must investigated on-project public-facing properties might change agent writes must investigated on-project determine public-facing properties change asks confirmation waits user response moves next step
+ - ❌ bad user says must investigated on-project public-facing properties might change agent writes investigated moves next step
+ - ✅ good user says must investigated on-project public-facing properties might change agent writes must investigated on-project determine public-facing properties change asks confirmation waits user response moves next step
 
  ---
 
@@ -231,7 +231,7 @@ domain knowledge, consult the gem documentation or knowledge files for setup opt
 
  please confirm refine ticket metadata.
 
- template output variables ticket_title release_version
+ template output variables _{{ ticket-title }}_ _{{ release-version }}_
 
  ---
 
@@ -259,7 +259,7 @@ domain knowledge, consult the gem documentation or knowledge files for setup opt
 
  accurately capture user story please confirm provide refinements.
 
- template output variables user_story
+ template output variables _{{ user-story }}_
 
  ---
 
@@ -294,7 +294,7 @@ domain knowledge, consult the gem documentation or knowledge files for setup opt
 
  please confirm provide refinements.
 
- template output variables acceptance_criteria
+ template output variables _{{ acceptance-criteria }}_
 
  ---
 
@@ -330,7 +330,7 @@ domain knowledge, consult the gem documentation or knowledge files for setup opt
 
  please confirm refine.
 
- template output variables scope
+ template output variables _{{ scope }}_
 
  ---
 
@@ -361,7 +361,7 @@ domain knowledge, consult the gem documentation or knowledge files for setup opt
 
  please confirm refine.
 
- template output variables qa
+ template output variables _{{ qa }}_
 
  ---
 
@@ -395,7 +395,7 @@ domain knowledge, consult the gem documentation or knowledge files for setup opt
 
  please confirm refine.
 
- template output variables breaking_deps
+ template output variables _{{ breaking-deps }}_
 
  ---
 
@@ -422,7 +422,7 @@ domain knowledge, consult the gem documentation or knowledge files for setup opt
 
  - ux new workflow requires additional form fields revised error messaging
  - infrastructure requires new environment variables deployment configuration
- - documentation update api reference v2 endpoint contract add migration guide v1→v2
+ - documentation update api reference v2 endpoint contract add migration guide v1v2
  - product feature flag needed gradual rollout coordinate marketing announcement
 
  based understand propose
@@ -431,7 +431,7 @@ domain knowledge, consult the gem documentation or knowledge files for setup opt
 
  please confirm refine.
 
- template output variables technical_considerations
+ template output variables _{{ technical-considerations }}_
 
  ---
 
@@ -465,7 +465,7 @@ domain knowledge, consult the gem documentation or knowledge files for setup opt
 
  please confirm refine.
 
- template output variables impacts
+ template output variables _{{ impacts }}_
 
  ---
 
@@ -516,7 +516,7 @@ domain knowledge, consult the gem documentation or knowledge files for setup opt
 
  please confirm provide refinements.
 
- template output variables dev_notes
+ template output variables _{{ dev-notes }}_
 
  ---
 
@@ -580,43 +580,43 @@ domain knowledge, consult the gem documentation or knowledge files for setup opt
 `core/templates/ticket.template.md`:
 
 ```md
-# {{ticket_title}}
+# _{{ ticket-title }}_
 
-**Release Version:** {{release_version}}
+**Release Version:** _{{ release-version }}_
 
 ## User Story
 
-{{user_story}}
+_{{ user-story }}_
 
 ## Acceptance Criteria
 
-{{acceptance_criteria}}
+_{{ acceptance-criteria }}_
 
 ## Checklist
 
 ### Scope
 
-{{scope}}
+_{{ scope }}_
 
 ### QA Considerations
 
-{{qa}}
+_{{ qa }}_
 
 ### Breaking Changes & Dependencies
 
-{{breaking_deps}}
+_{{ breaking-deps }}_
 
 ### Cross-Functional Requirements
 
-{{technical_considerations}}
+_{{ technical-considerations }}_
 
 ## Impacts
 
-{{impacts}}
+_{{ impacts }}_
 
 ## Dev Notes
 
-{{dev_notes}}
+_{{ dev-notes }}_
 ```
 
 `refinement.package.yaml`:
