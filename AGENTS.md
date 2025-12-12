@@ -4,6 +4,8 @@ In Gem Factory, you write and create Gemini gems following architectural and sty
 
 ## Documentation
 
+> ⚠️ **MUST READ**
+
 See [docs/index.md](./docs/index.md) for platform overview, architecture, and style guide.
 
 ## Creating Gems

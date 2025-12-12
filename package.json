@@ -1,7 +1,7 @@
 {
   "name": "gem-factory",
   "version": "1.0.0",
-  "description": "Factory and demonstration space for creating Gemini gems with architectural and style guidelines",
+  "description": "Development environment and toolkit for creating and deploying Gemini Gems with deep reasoning and knowledge-driven architecture",
   "keywords": [
     "ai-agents",
     "gems",

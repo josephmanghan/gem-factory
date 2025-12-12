@@ -1,3 +1,5 @@
 # Project Instructions for Claude Code
 
-Always read and reference [AGENTS.md](./AGENTS.md) for complete details before proceeding with any task.
+> ⚠️ **CRITICAL REQUIREMENT**
+>
+> **You MUST read [AGENTS.md](./AGENTS.md) before proceeding with any task.**
