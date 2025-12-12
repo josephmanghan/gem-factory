@@ -12,6 +12,14 @@ Gems can be easily maintained and shared with collaborators. When you connect kn
 
 The purpose of this repository is to provide an environment for developing Gems that unlock Gemini's reasoning potential through thoughtful, well-architected system instructions and knowledge organization.
 
+## Quick Start
+
+1. Clone the repository and install dependencies: `npm install`
+2. Explore existing gems in the `gems/` directory to understand the architecture
+3. If using an agentic IDE (like Cursor), agents will automatically leverage the [AGENTS.md](./AGENTS.md) file to help you create new gems following project conventions
+4. Run `npm run deploy:target {gem-name}` to prepare a gem for deployment
+5. See [Getting Started](#getting-started-setting-up-a-gem) below for complete deployment instructions
+
 ## Requirements
 
 - **Access to Gemini** - You'll need access to the Gemini Web UI to create and deploy Gems
@@ -21,24 +29,38 @@ The purpose of this repository is to provide an environment for developing Gems 
 
 ## Working with Agents
 
-This repository is structured to be compatible with agentic IDEs that follow the [AGENTS.md specification](https://agents.md/), now recognised as a standard by the [Linux Foundation](https://tinyurl.com/37kdev8t). The [AGENTS.md](./AGENTS.md) file supports agents in contributing to this repo.
+This repository is structured to be compatible with agentic IDEs that follow the [AGENTS.md specification](https://agents.md/), now recognised as a standard by the [Linux Foundation's Agentic AI Foundation (AAIF)](https://aaif.io/press/linux-foundation-announces-the-formation-of-the-agentic-ai-foundation-aaif-anchored-by-new-project-contributions-including-model-context-protocol-mcp-goose-and-agents-md/). The [AGENTS.md](./AGENTS.md) file supports agents in contributing to this repo.
 
 For complete architectural and style guidelines that both agents and humans should follow when creating gems, see [docs/index.md](./docs/index.md). For an overview of the Gemini Gems platform itself, see [docs/platform-overview.md](./docs/platform-overview.md).
+
+## Examples
+
+This repository includes two reference implementations:
+
+- **[Refinement Gem](./gems/refinement/)** - Helps refine requirements and generate tickets
+- **[User Testing Gem](./gems/user-testing/)** - Simulates personas for user testing
+
+Explore these to understand the architecture in practice.
 
 ## Repository Structure
 
 ```
 gems/                      # Individual gem directories
   {gem-name}/             # Each gem follows the standard structure
-    internal/             # Core gem components
+    internal/             # Core gem components (source files)
       agent/              # Agent definition (system instructions)
       core/               # Instructions, templates, and data
+    README.md             # Gem-specific documentation
+    CHANGELOG.md          # Version history
 
-docs/                      # Documentation
+deploy/                    # Generated deployment artifacts (output)
+  {gem-name}/             # Markdown versions ready for Gemini UI
+  web-bundles/            # Portable single-file bundles
+
+docs/                      # Project documentation
   index.md                # Entry point with links to all documentation
 
 scripts/                   # Deployment and automation scripts
-deploy/                    # Generated deployment artifacts
 ```
 
 ## Validation & Deployment
@@ -64,7 +86,7 @@ npm run deploy:target {gem-name}
 The deployment script:
 
 1. **Converts YAML to Markdown** - Your `{gem-name}.agent.yaml` definitions are converted to Markdown for easier Gemini UI pasting
-2. **Optimizes Context** - Removes filler words and unnecessary markup (caveman processing) to reduce token usage while preserving reasoning ability and meaning
+2. **Optimizes Context** - Removes filler words and stopgap words (caveman processing) to reduce token count while preserving reasoning ability and meaning
 3. **Generates Web Bundle** - Creates a portable `.md` file containing your complete gem definition
 
 The web bundle is particularly valuable for quick testing and sharing—you can copy-paste it directly into any AI chat interface (Gemini, ChatGPT, Claude, etc.) without needing to create a formal Gem first.
@@ -90,7 +112,7 @@ You can edit CSVs either in your local IDE or directly in Google Sheets. Both ap
 
 > **Note** - If your Gem included a help command, it's recommended to add the description "use /help to get started" so that a user immediately knows how to get started when they load a fresh Gem.
 
-3. Copy your `{gem-name}.agent.yaml` content and paste it into the **System instructions** pane
+3. Copy your processed `{gem-name}.agent.md` content from the `deploy/` directory and paste it into the **System instructions** pane (or use the raw YAML from `internal/agent/{gem-name}.agent.yaml` if you haven't run deployment yet)
 4. Click the **+** button next to **Knowledge**
 5. Add up to 10 knowledge files from Google Drive (this is important—adding from Drive enables automatic updates)
 
