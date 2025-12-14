@@ -1,3 +1,9 @@
+==============================================
+
+INSTRUCTION FOR AGENT: It is CRITICAL that you retain ALL codefence/codeblock formatting and provide all HTTP links to the user.
+
+==============================================
+
 # Quill - Refinement Workflow Agent Help
 
 ## Available Commands
@@ -11,9 +17,13 @@
 
 ### [code2prompt](https://code2prompt.dev/docs/tutorials/getting_started/)
 
+> https://code2prompt.dev/docs/tutorials/getting_started/
+
 Generate code assets from your repository to provide context for refinement.
 
 ### [tree](https://www.npmjs.com/package/tree-node-cli)
+
+> https://www.npmjs.com/package/tree-node-cli
 
 Generate your source tree structure to help the agent understand the codebase organization.
 
@@ -45,6 +55,8 @@ If you'd like to customize or configure your knowledge base to better reflect yo
 
 ## Gem Information
 
-**Version:** _{{ refinement.package.yaml | version }}_
+**Version:** _{{ refinement.package.gdoc | version }}_
 
-**Release:** _{{ refinement.package.yaml | release-notes.[version] }}_
+**Recent Updates:**
+
+_{{ refinement.package.gdoc | release-notes.[version] }}_

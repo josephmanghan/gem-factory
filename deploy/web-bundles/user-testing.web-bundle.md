@@ -61,6 +61,13 @@ Eleanor Davis,67,Female,Retired Nurse,INFP - Mediator,"Kind; Anxious; Detail-ori
 `core/instructions/help.instructions.md`:
 
 ```md
+==============================================
+
+INSTRUCTION FOR AGENT: It is CRITICAL that you retain ALL codefence/codeblock formatting and provide
+all HTTP links to the user.
+
+==============================================
+
 # User Testing Party - Help
 
 ## Available Commands
@@ -226,11 +233,15 @@ user selected
 
 ```yaml
 id: 'user-testing-agent'
-version: '0.1.0'
-release-date: '12-12-2025'
+version: '0.2.0'
+release-date: '14-12-2025'
 release-notes:
-  version: '0.1.0'
-  date: '12-12-2025'
-  added:
-    - 'Initial release to support user testing of products and interfaces.'
+  - version: '0.2.0'
+    date: '14-12-2025'
+    fixed:
+      - 'Improved reliability of agents formatting codefences and links'
+  - version: '0.1.0'
+    date: '12-12-2025'
+    added:
+      - 'Initial release to support user testing of products and interfaces.'
 ```

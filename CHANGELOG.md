@@ -1,3 +1,10 @@
+## [1.1.0] - 14-12-2025
+
+### Added
+
+- Updated `AGENTS.md` with versioning rules for `*.package.yaml` files
+- Added to `README` links to example Gem gems, their knowledge files, and a demo video
+
 ## [1.0.0] - 12-12-2025
 
 ### Added

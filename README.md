@@ -10,15 +10,15 @@ Recent Gemini updates represent a marked advancement in reasoning ability and pr
 
 More importantly, the Web UI is accessible to everyone — product managers, designers, non-technical stakeholders — not locked to engineers. This democratization is what makes Gems genuinely interesting: we can all exist in the same ecosystem, using the same tools, with the same level of power. Combined with Gemini's cost-effectiveness, this creates a niche but compelling case for Gems as a vehicle for AI agent development.
 
-Gems can be easily maintained and shared with collaborators. When you connect knowledge files from Google Drive, they receive automatic updates — no need to recreate or redistribute. Update once, everyone gets it for free. This enables sustainable, iterative development where both users and dependent gems automatically receive improvements without any friction.
+Gems can be easily maintained and shared with collaborators. When you connect knowledge files from Google Drive, they receive automatic updates — no need to recreate or redistribute. Update once, everyone gets it for free. This enables sustainable, iterative development where both users and dependent Gems automatically receive improvements without any friction.
 
-The architecture is designed around this update pattern: minimal iteration on system instructions, with most improvements happening through knowledge file updates. This keeps gems stable while remaining flexible.
+The architecture is designed around this update pattern: minimal iteration on system instructions, with most improvements happening through knowledge file updates. This keeps Gems stable while remaining flexible.
 
 ## Quick Start
 
 1. Clone the repository and install dependencies: `npm install`
-2. Explore existing gems in the `gems/` directory to understand the architecture
-3. If using an agentic IDE (like Cursor), agents will automatically leverage the [AGENTS.md](./AGENTS.md) file to help you create new gems following project conventions
+2. Explore existing Gems in the `gems/` directory to understand the architecture
+3. If using an agentic IDE/tool (like Cursor or Claude Code), agents will automatically leverage the [AGENTS.md](./AGENTS.md) file to help you create new Gems following project conventions
 4. Run `npm run deploy:target {gem-name}` to prepare a gem for deployment
 5. See [Getting Started](#getting-started-setting-up-a-gem) below for complete deployment instructions
 
@@ -43,6 +43,10 @@ This repository includes two reference implementations:
 - **[User Testing Gem](./gems/user-testing/)** - Simulates personas for user testing
 
 Explore these to understand the architecture in practice.
+
+<!-- TODO Gem Drive -->
+<!-- TODO Gem links -->
+<!-- TODO video -->
 
 ## Repository Structure
 
@@ -115,6 +119,9 @@ You can edit CSVs either in your local IDE or directly in Google Sheets. Both ap
 > **Note** - If your Gem included a help command, it's recommended to add the description "use /help to get started" so that a user immediately knows how to get started when they load a fresh Gem.
 
 3. Copy your processed `{gem-name}.agent.md` content from the `deploy/` directory and paste it into the **System instructions** pane (or use the raw YAML from `internal/agent/{gem-name}.agent.yaml` if you haven't run deployment yet)
+
+> **Tip** - In Google Docs, enable Markdown formatting (Tools > Preferences > Markdown) to easily paste and format Markdown content.
+
 4. Click the **+** button next to **Knowledge**
 5. Add up to 10 knowledge files from Google Drive (this is important — adding from Drive enables automatic updates)
 
