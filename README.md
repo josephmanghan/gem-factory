@@ -40,13 +40,11 @@ For complete architectural and style guidelines that both agents and humans shou
 This repository includes two reference implementations:
 
 - **[Refinement Gem](./gems/refinement/)** - Helps refine requirements and generate tickets
-- **[User Testing Gem](./gems/user-research/)** - Simulates personas for user research
+  - [Live Gem](https://gemini.google.com/gem/1yoZvdDaRLYp7oQUwX0NVvLy3falyKSp0) | [Refinement Drive Folder](https://drive.google.com/drive/folders/1eZqZ2hWnxFk5rIP7Gf0_gh-Qsjm2xaGe)
+- **[User Research Gem](./gems/user-research/)** - Simulates personas for user research
+  - [Live Gem](https://gemini.google.com/gem/1z_72jQ0Md9mT703Zxk-KqXdsd0mt3K_b) | [User Research Drive Folder](https://drive.google.com/drive/folders/1h39Jt069eYs7r-lgjo9PuSoCY79goUhG)
 
 Explore these to understand the architecture in practice.
-
-<!-- TODO Gem Drive -->
-<!-- TODO Gem links -->
-<!-- TODO video -->
 
 ## Repository Structure
 

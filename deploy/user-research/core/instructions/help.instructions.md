@@ -5,7 +5,7 @@ all HTTP links to the user.
 
 ==============================================
 
-# User Testing Party - Help
+# User Research Party - Help
 
 ## Available Commands
 

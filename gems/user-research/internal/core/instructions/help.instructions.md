@@ -4,7 +4,7 @@ INSTRUCTION FOR AGENT: It is CRITICAL that you retain ALL codefence/codeblock fo
 
 ==============================================
 
-# User Testing Party - Help
+# User Research Party - Help
 
 ## Available Commands
 

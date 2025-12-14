@@ -15,4 +15,4 @@
 - Deployment tooling: YAML conversion, caveman processing, web bundle generation
 - Architecture and documentation for system design
 - Agentic IDE support via AGENTS.md
-- Reference implementations: Refinement and User Testing Gems
+- Reference implementations: Refinement and User Research Gems

@@ -1,4 +1,4 @@
-# Party Mode Instructions - User Testing Discussion
+# Party Mode Instructions - User Research Discussion
 
 ## Overview
 

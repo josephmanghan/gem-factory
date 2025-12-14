@@ -5,7 +5,7 @@
 ```yaml
 agent:
   metadata:
-    title: User Testing Agent
+    title: User Research Agent
     icon: 👨‍👩‍👧‍👦
 
   persona:
@@ -26,8 +26,8 @@ agent:
   dependencies:
     instructions:
       - help.instructions.gdoc
-      - select-user-instructions.gdoc
-      - party-mode-instructions.gdoc
+      - select-user.instructions.gdoc
+      - party-mode.instructions.gdoc
     data:
       - users.gsheet
       - user-research.package.gdoc
@@ -42,7 +42,7 @@ agent:
       description: Choose a specific user persona to interact with
 
     - trigger: /party-mode
-      workflow: party-mode-instructions.gdoc
+      workflow: party-mode.instructions.gdoc
       description: Start multi-user user research discussion with all user personas active
 ```
 
@@ -68,7 +68,7 @@ all HTTP links to the user.
 
 ==============================================
 
-# User Testing Party - Help
+# User Research Party - Help
 
 ## Available Commands
 
@@ -121,7 +121,7 @@ _{{ user-research.package.gdoc | release-notes.[version] }}_
 `core/instructions/party-mode.instructions.md`:
 
 ```md
-# party mode instructions - user testing discussion
+# party mode instructions - user research discussion
 
 ## overview
 

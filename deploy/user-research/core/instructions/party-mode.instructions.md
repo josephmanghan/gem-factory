@@ -1,4 +1,4 @@
-# party mode instructions - user testing discussion
+# party mode instructions - user research discussion
 
 ## overview
 

@@ -1,4 +1,4 @@
-# User Testing Gem
+# User Research Gem
 
 ## Description
 
