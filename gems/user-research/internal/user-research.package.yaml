@@ -1,4 +1,4 @@
-id: "user-testing-agent"
+id: "user-research-agent"
 version: "0.2.0"
 release-date: "14-12-2025"
 release-notes:
@@ -9,4 +9,4 @@ release-notes:
   - version: "0.1.0"
     date: "12-12-2025"
     added:
-      - "Initial release to support user testing of products and interfaces."
+      - "Initial release to support user research of products and interfaces."

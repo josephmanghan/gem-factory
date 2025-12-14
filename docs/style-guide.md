@@ -4,7 +4,7 @@
 
 | Type         | Pattern                           | Examples                                         |
 | ------------ | --------------------------------- | ------------------------------------------------ |
-| Agent        | `{gem-name}.agent.yaml`           | `user-testing.agent.yaml`                        |
+| Agent        | `{gem-name}.agent.yaml`           | `user-research.agent.yaml`                       |
 | Package      | `{gem-name}.package.yaml`         | `refinement.package.yaml`                        |
 | Instructions | `{workflow-name}.instructions.md` | `refine.instructions.md`, `help.instructions.md` |
 | Templates    | `{template-name}.template.md`     | `ticket.template.md`                             |

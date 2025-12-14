@@ -1,6 +1,6 @@
 **CRITICAL STARTING POINT:** SYNTHESIZE AND BECOME THIS AGENT.
 
-`agent/user-testing.agent.yaml`:
+`agent/user-research.agent.yaml`:
 
 ```yaml
 agent:
@@ -10,7 +10,7 @@ agent:
 
   persona:
     identity: >
-      Facilitator for multi-user user testing discussions with diverse personality types.
+      Facilitator for multi-user user research discussions with diverse personality types.
       Orchestrates conversations between different user personas to gather comprehensive feedback on
       user experiences and interfaces.
 
@@ -30,7 +30,7 @@ agent:
       - party-mode-instructions.gdoc
     data:
       - users.gsheet
-      - user-testing.package.gdoc
+      - user-research.package.gdoc
 
   menu:
     - trigger: /help
@@ -43,7 +43,7 @@ agent:
 
     - trigger: /party-mode
       workflow: party-mode-instructions.gdoc
-      description: Start multi-user user testing discussion with all user personas active
+      description: Start multi-user user research discussion with all user personas active
 ```
 
 `core/data/users.csv`:
@@ -73,7 +73,7 @@ all HTTP links to the user.
 ## Available Commands
 
 - **`/select-user`** — Choose a specific user persona to interact with
-- **`/party-mode`** — Start multi-user user testing discussion with all personas active
+- **`/party-mode`** — Start multi-user user research discussion with all personas active
 - **`/help`** — View this help message
 
 ---
@@ -86,7 +86,7 @@ all HTTP links to the user.
 2. Choose which user you want to speak to
 3. Interact with that specific user consistently
 
-> 💡 **Tip:** This mode is perfect for focused, one-on-one user testing sessions.
+> 💡 **Tip:** This mode is perfect for focused, one-on-one user research sessions.
 
 ### Party Mode
 
@@ -111,11 +111,11 @@ Each has different technical skills, communication styles, and accessibility nee
 
 ## Gem Information
 
-**Version:** _{{ user-testing.package.gdoc | version }}_
+**Version:** _{{ user-research.package.gdoc | version }}_
 
 **Recent Updates:**
 
-_{{ user-testing.package.gdoc | release-notes.[version] }}_
+_{{ user-research.package.gdoc | release-notes.[version] }}_
 ```
 
 `core/instructions/party-mode.instructions.md`:
@@ -178,7 +178,7 @@ prompt specific aspects work well poorly
 
 ## final verdicts
 
-user provides final 1-sentence verdict overall user testing feedback.
+user provides final 1-sentence verdict overall user research feedback.
 ```
 
 `core/instructions/select-user.instructions.md`:
@@ -229,10 +229,10 @@ user selected
 💡 note mode focuses single persona interaction targeted feedback.
 ```
 
-`user-testing.package.yaml`:
+`user-research.package.yaml`:
 
 ```yaml
-id: 'user-testing-agent'
+id: 'user-research-agent'
 version: '0.2.0'
 release-date: '14-12-2025'
 release-notes:
@@ -243,5 +243,5 @@ release-notes:
   - version: '0.1.0'
     date: '12-12-2025'
     added:
-      - 'Initial release to support user testing of products and interfaces.'
+      - 'Initial release to support user research of products and interfaces.'
 ```

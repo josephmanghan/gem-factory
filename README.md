@@ -40,7 +40,7 @@ For complete architectural and style guidelines that both agents and humans shou
 This repository includes two reference implementations:
 
 - **[Refinement Gem](./gems/refinement/)** - Helps refine requirements and generate tickets
-- **[User Testing Gem](./gems/user-testing/)** - Simulates personas for user testing
+- **[User Testing Gem](./gems/user-research/)** - Simulates personas for user research
 
 Explore these to understand the architecture in practice.
 

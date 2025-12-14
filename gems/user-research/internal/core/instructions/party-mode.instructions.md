@@ -54,4 +54,4 @@ Refer to _{{ users.gsheet }}_ for complete persona definitions including:
 
 ## Final Verdicts
 
-Each user provides a final **1-sentence verdict** on overall user testing feedback.
+Each user provides a final **1-sentence verdict** on overall user research feedback.

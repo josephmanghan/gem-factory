@@ -25,7 +25,7 @@ if [ -z "$1" ]; then
 
   echo ""
   echo "Usage: npm run deploy:target -- <gem-name>"
-  echo "Example: npm run deploy:target -- user-testing"
+  echo "Example: npm run deploy:target -- user-research"
   exit 1
 fi
 
